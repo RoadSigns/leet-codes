@@ -7,7 +7,10 @@ import (
 
 func TestCanCalculateWhenOnlySameNumberNeeded(t *testing.T) {
 	expected := []int{0, 1}
-	got := twoSum([]int{3, 3}, 6)
 
+	got := twoSum([]int{3, 3}, 6)
+	assert.Equal(t, expected, got)
+
+	got = twoSumTwo([]int{3, 3}, 6)
 	assert.Equal(t, expected, got)
 }

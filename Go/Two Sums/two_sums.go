@@ -15,3 +15,15 @@ func twoSum(nums []int, target int) []int {
 	}
 	return result
 }
+
+func twoSumTwo(nums []int, target int) []int {
+	tmpMap := make(map[int]int)
+	for i := 0; i < len(nums); i++ {
+		if val, exists := tmpMap[target-nums[i]]; exists {
+			return []int{val, i}
+		} else {
+			tmpMap[nums[i]] = i
+		}
+	}
+	return nil
+}
