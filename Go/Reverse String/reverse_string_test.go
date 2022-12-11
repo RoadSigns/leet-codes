@@ -12,6 +12,13 @@ func TestReverseString(t *testing.T) {
 	assert.Equal(t, expected, got)
 }
 
+func TestReverseStringByPointer(t *testing.T) {
+	expected := []byte{'o', 'l', 'l', 'e', 'h'}
+	got := []byte{'h', 'e', 'l', 'l', 'o'}
+	reverse_string.ReverseStringByPointer(got)
+	assert.Equal(t, expected, got)
+}
+
 func BenchmarkReverseString(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		reverse_string.ReverseString([]byte{'h', 'e', 'l', 'l', 'o'})
