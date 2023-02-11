@@ -14,3 +14,23 @@ func TestFindLength(t *testing.T) {
 
 	assert.Equal(t, expected, got)
 }
+
+func TestNumSubarrayProductLessThanK(t *testing.T) {
+	nums := []int{10, 5, 2, 6}
+	k := 100
+	expected := 8
+
+	got := numSubarrayProductLessThanK(nums, k)
+
+	assert.Equal(t, expected, got)
+}
+
+func TestFindBestSubArray(t *testing.T) {
+	nums := []int{3, -1, 4, 12, -8, 5, 6}
+	k := 4
+	expected := 18
+
+	got := findBestSubarray(nums, k)
+
+	assert.Equal(t, expected, got)
+}
