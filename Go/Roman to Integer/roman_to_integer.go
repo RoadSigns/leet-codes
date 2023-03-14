@@ -71,3 +71,29 @@ func convert(s string) int {
 
 	return 0
 }
+
+func RomanToIntHashMap(s string) int {
+	romanIntMap := map[byte]int{
+		'I': 1,
+		'V': 5,
+		'X': 10,
+		'L': 50,
+		'C': 100,
+		'D': 500,
+		'M': 1000,
+	}
+
+	result := 0
+	previous := 0
+
+	for i := len(s) - 1; i >= 0; i-- {
+		current := romanIntMap[s[i]]
+		if current < previous {
+			result -= current
+		} else {
+			result += current
+		}
+		previous = current
+	}
+	return result
+}

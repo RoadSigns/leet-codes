@@ -27,3 +27,25 @@ func TestRomanToInt(t *testing.T) {
 	got = roman_to_integer.RomanToInt("I")
 	assert.Equal(t, expected, got)
 }
+
+func TestRomanToIntHashMap(t *testing.T) {
+	expected := 4
+	got := roman_to_integer.RomanToIntHashMap("IV")
+	assert.Equal(t, expected, got)
+
+	expected = 88
+	got = roman_to_integer.RomanToIntHashMap("LXXXVIII")
+	assert.Equal(t, expected, got)
+
+	expected = 1994
+	got = roman_to_integer.RomanToIntHashMap("MCMXCIV")
+	assert.Equal(t, expected, got)
+
+	expected = 3
+	got = roman_to_integer.RomanToIntHashMap("III")
+	assert.Equal(t, expected, got)
+
+	expected = 1
+	got = roman_to_integer.RomanToIntHashMap("I")
+	assert.Equal(t, expected, got)
+}
