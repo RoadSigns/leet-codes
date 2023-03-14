@@ -1,6 +1,8 @@
 package palindrome_number
 
-import "strconv"
+import (
+	"strconv"
+)
 
 func IsPalindrome(x int) bool {
 	runes := []rune(strconv.Itoa(x))
@@ -12,5 +14,17 @@ func IsPalindrome(x int) bool {
 }
 
 func IsPalindromeWithoutStringConversion(x int) bool {
-	
+	if x < 0 {
+		return false
+	}
+	if x < 9 {
+		return true
+	}
+	xC := x
+	tmp := 0
+	for x > 0 {
+		tmp = (tmp * 10) + (x % 10)
+		x = x / 10
+	}
+	return xC == tmp
 }
