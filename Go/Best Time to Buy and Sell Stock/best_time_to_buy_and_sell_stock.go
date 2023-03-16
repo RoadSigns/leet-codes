@@ -1,18 +1,21 @@
 package best_time_to_buy_and_sell_stock
 
 func MaxProfit(prices []int) int {
-	maxProfit := 0
+	if len(prices) <= 1 {
+		return 0
+	}
 
-	for i, p := range prices {
-		for _, q := range prices[i:] {
-			if q > p {
-				profit := q - p
-				if profit > maxProfit {
-					maxProfit = profit
-				}
+	bP := prices[0]
+	p := 0
+	for i := 1; i < len(prices); i++ {
+		if prices[i] < bP {
+			bP = prices[i]
+		} else {
+			c := prices[i] - bP
+			if c > p {
+				p = c
 			}
 		}
 	}
-
-	return maxProfit
+	return p
 }
