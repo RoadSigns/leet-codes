@@ -28,3 +28,15 @@ func InvertTree(root *TreeNode) *TreeNode {
 		Right: l,
 	}
 }
+
+func InvertTreeRefactored(root *TreeNode) *TreeNode {
+	if root == nil {
+		return root
+	}
+
+	root.Left, root.Right = root.Right, root.Left
+	InvertTree(root.Left)
+	InvertTree(root.Right)
+
+	return root
+}
