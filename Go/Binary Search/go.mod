@@ -1,4 +1,4 @@
-module github.com/roadsigns/leet-codes/go/binary_tree
+module github.com/roadsigns/leet-codes/go/binary_search
 
 go 1.18
 
