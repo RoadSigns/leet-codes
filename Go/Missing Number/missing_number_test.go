@@ -11,4 +11,9 @@ func TestMissingNumber(t *testing.T) {
 	nums := []int{0, 1, 3}
 	got := missing_number.MissingNumber(nums)
 	assert.Equal(t, expected, got)
+
+	expected = 2
+	nums = []int{0, 1}
+	got = missing_number.MissingNumber(nums)
+	assert.Equal(t, expected, got)
 }
