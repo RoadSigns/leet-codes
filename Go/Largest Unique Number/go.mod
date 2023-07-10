@@ -1,4 +1,4 @@
-module github.com/roadsigns/leet-codes/go/fizz_buzz
+module github.com/roadsigns/leet-codes/go/largest_unqiue_number
 
 go 1.18
 
