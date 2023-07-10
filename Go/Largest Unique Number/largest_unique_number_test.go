@@ -11,3 +11,9 @@ func TestLargestUniqueNumber(t *testing.T) {
 	got := largest_unique_number.LargestUniqueNumber([]int{5, 7, 3, 9, 4, 9, 8, 3, 1})
 	assert.Equal(t, expected, got)
 }
+
+func TestLargestUniqueNumberNoneAvailable(t *testing.T) {
+	expected := -1
+	got := largest_unique_number.LargestUniqueNumber([]int{9, 9, 8, 8})
+	assert.Equal(t, expected, got)
+}
